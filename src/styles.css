@@ -85,9 +85,38 @@ form input:focus {
   padding: 15px 11px;
 }
 
-.todo-item p {
+.todo-item .todo-content {
   font-size: 15px;
   font-weight: 200;
+  height: 24px;
+  border: none;
+}
+
+.list-group-item .delete_action_btn {
+  display: none;
+}
+
+.list-group-item.active {
+  background: #ffed133d;
+  border: none;
+}
+
+.list-group-item.active .todo-content {
+  background: #ffed133d;
+}
+
+.list-group-item.active .delete_action_btn {
+  display: block;
+}
+
+.list-group-item.active .move_action_btn {
+  display: none;
+}
+
+.todo-item .todo-content:focus,
+.todo-item .todo-content:active {
+  border: none;
+  outline: none;
 }
 
 .todo-action a svg {
