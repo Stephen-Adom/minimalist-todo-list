@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "js-linter": "npx eslint . --fix",
+    "css-linter": "npx stylelint \"**/*.{css,scss}\" --fix",
     "build": "webpack",
     "start": "webpack serve --open"
   },
