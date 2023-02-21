@@ -14,3 +14,51 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.todo-container {
+  box-shadow: 0 0rem 1rem rgba(22, 28, 45, 0.2);
+  border-radius: 0;
+}
+
+.card-header {
+  padding-top: 16px;
+}
+
+.card-toolbar svg {
+  width: 20px;
+  color: grey;
+}
+
+form input {
+  width: 100%;
+  padding: 12px 13px;
+  border: none;
+}
+
+form input::placeholder {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+form input:active,
+form input:focus {
+  border: none;
+  outline: none;
+}
+
+.card-footer {
+  padding: 16px;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: grey;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.card-footer a:hover {
+  color: #000;
+  text-decoration: underline;
+}
