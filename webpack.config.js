@@ -9,6 +9,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[hash][ext][query]',
     clean: true,
   },
   plugins: [
@@ -23,6 +24,10 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
         include: path.resolve(__dirname, 'src'),
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset/resource',
       },
     ],
   },

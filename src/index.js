@@ -1,8 +1,10 @@
 import './styles.css';
+import arrowDown from './assets/bend-arrow-right-svgrepo-com.svg';
 
 import { TodoList } from './modules/index.js';
 
 const todoListContainer = document.querySelector('.list-group');
+const submitBtn = document.querySelector('.submitBtn img');
 
 // display all todoList
 const renderTodoList = () => {
@@ -55,4 +57,5 @@ const renderTodoList = () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   renderTodoList();
+  submitBtn.src = arrowDown;
 });

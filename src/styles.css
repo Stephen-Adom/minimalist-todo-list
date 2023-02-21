@@ -30,11 +30,23 @@ body {
 }
 
 form input {
-  width: 100%;
+  width: 95%;
   padding: 12px 13px;
   border: none;
   font-style: italic;
   font-size: 15px;
+}
+
+form button {
+  border: none;
+  background: transparent;
+  padding: 0 14px;
+}
+
+form button img {
+  width: 15px;
+  transform: scaleX(-1);
+  filter: opacity(0.4);
 }
 
 form input::placeholder {
