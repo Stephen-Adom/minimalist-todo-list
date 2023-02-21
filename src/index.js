@@ -1,10 +1,11 @@
 import './styles.css';
 import arrowDown from './assets/bend-arrow-right-svgrepo-com.svg';
 
-import { TodoList } from './modules/index.js';
+import { TodoList, addTask } from './modules/index.js';
 
 const todoListContainer = document.querySelector('.list-group');
 const submitBtn = document.querySelector('.submitBtn img');
+const form = document.querySelector('form');
 
 // display all todoList
 const renderTodoList = () => {
@@ -54,6 +55,15 @@ const renderTodoList = () => {
     todoListContainer.innerHTML = todoHtml;
   }
 };
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (form.description.value.length) {
+    addTask(form.description.value);
+    form.reset();
+    renderTodoList();
+  }
+});
 
 window.addEventListener('DOMContentLoaded', () => {
   renderTodoList();
