@@ -16,7 +16,7 @@ body {
 }
 
 .todo-container {
-  box-shadow: 0 0rem 1rem rgba(22, 28, 45, 0.2);
+  box-shadow: 0 0 1rem rgba(22, 28, 45, 0.2);
   border-radius: 0;
 }
 
@@ -33,6 +33,8 @@ form input {
   width: 100%;
   padding: 12px 13px;
   border: none;
+  font-style: italic;
+  font-size: 15px;
 }
 
 form input::placeholder {
@@ -61,4 +63,22 @@ form input:focus {
 .card-footer a:hover {
   color: #000;
   text-decoration: underline;
+}
+
+.todo-item {
+  width: 100%;
+}
+
+.list-group-item {
+  padding: 15px 11px;
+}
+
+.todo-item p {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.todo-action a svg {
+  width: 23px;
+  color: #b9b6b6;
 }
