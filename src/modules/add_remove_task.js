@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { fromEvent } from 'rxjs';
 import Todo from './todo.model.js';
 
 // eslint-disable-next-line import/no-mutable-exports
@@ -32,6 +34,18 @@ const toggleTaskCompleted = (index) => {
   saveToStorage();
 };
 
-export {
-  addTask, removeTask, TodoList, toggleTaskCompleted,
+const editTaskDescription = (description, index) => {
+  const selectedTodo = TodoList.find((todo) => todo.index === index);
+  selectedTodo.description = description;
+  saveToStorage();
 };
+
+export {
+  addTask, removeTask, TodoList, toggleTaskCompleted, editTaskDescription,
+};
+
+fromEvent(window, 'DOMContentLoaded').subscribe(() => {
+  if (localStorage.getItem('myTasks')) {
+    TodoList = JSON.parse(localStorage.getItem('myTasks'));
+  }
+});

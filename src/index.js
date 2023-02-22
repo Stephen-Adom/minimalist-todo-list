@@ -1,11 +1,14 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import './styles.css';
-import arrowDown from './assets/bend-arrow-right-svgrepo-com.svg';
+import { debounceTime, fromEvent } from 'rxjs';
 
+import arrowDown from './assets/bend-arrow-right-svgrepo-com.svg';
 import {
   addTask,
   removeTask,
   TodoList,
   toggleTaskCompleted,
+  editTaskDescription,
 } from './modules/index.js';
 
 const todoListContainer = document.querySelector('.list-group');
@@ -50,7 +53,7 @@ const renderTodoList = () => {
             >
               <div class="d-flex align-items-center gap-3 w-75">
                 ${renderCheckBoxIfCompletedIsFalse(todo)}
-                <input type="text" class="w-100 todo-content" value="${todo.description}"></input>
+                <input type="text" class="w-100 todo-content" value="${todo.description}" id="${todo.index}"></input>
               </div>
 
               <div class="todo-action">
@@ -114,7 +117,6 @@ todoListContainer.addEventListener('click', (e) => {
   }
 
   if (e.target.matches('button svg')) {
-    console.log(e.target);
     removeTask(Number(e.target.parentElement.getAttribute('id')));
     renderTodoList();
   }
@@ -126,6 +128,10 @@ todoListContainer.addEventListener('click', (e) => {
     toggleTaskCompleted(Number(e.target.getAttribute('id')));
     renderTodoList();
   }
+});
+
+fromEvent(todoListContainer, 'input').pipe(debounceTime(800)).subscribe((e) => {
+  editTaskDescription(e.target.value.trim(), Number(e.target.id));
 });
 
 window.addEventListener('DOMContentLoaded', () => {
