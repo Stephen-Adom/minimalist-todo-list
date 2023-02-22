@@ -85,12 +85,62 @@ form input:focus {
   padding: 15px 11px;
 }
 
-.todo-item p {
+.todo-item .todo-content {
   font-size: 15px;
   font-weight: 200;
+  height: 24px;
+  border: none;
 }
 
-.todo-action a svg {
-  width: 23px;
+.list-group-item .delete_action_btn {
+  display: none;
+}
+
+.list-group-item.active {
+  background-color: rgb(255 255 0 / 74%) !important;
+  border: none;
+}
+
+.list-group-item.active .todo-content {
+  background-color: rgb(255 255 0 / 74%) !important;
+}
+
+.list-group-item.active .delete_action_btn {
+  display: block;
+}
+
+.list-group-item.active .move_action_btn {
+  display: none;
+}
+
+.todo-item .todo-content:focus,
+.todo-item .todo-content:active {
+  border: none;
+  outline: none;
+}
+
+.todo-action button {
+  background: transparent;
+  border: none;
+  width: 34px;
+}
+
+.todo-action button svg {
+  width: 100%;
   color: #b9b6b6;
+}
+
+.completed-check {
+  width: 18px;
+  color: #0d6efd;
+  cursor: pointer;
+}
+
+.form-check-input {
+  cursor: pointer;
+}
+
+.list-group-item.completed .todo-content {
+  text-decoration: line-through;
+  color: #9b9797;
 }

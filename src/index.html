@@ -16,6 +16,9 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-5 col-md-10 col-sm-12 col-12">
+          <div class="text-center logo-container">
+            <img src="" width="15%" alt="todoApp">
+          </div>
           <h2 class="display-6 text-center">Todo App</h2>
           <div class="card todo-container border-0 mt-4">
             <div
@@ -49,9 +52,11 @@
                   aria-label="add_to_your_list"
                   type="text"
                   placeholder="Add to your list..."
+                  name="description"
+                  required
                 />
                 <button
-                  type="button"
+                  type="submit"
                   title="click this or press this to submit"
                   class="submitBtn"
                 >
