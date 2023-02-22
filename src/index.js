@@ -7,7 +7,6 @@ import {
   addTask,
   removeTask,
   TodoList,
-  toggleTaskCompleted,
   editTaskDescription,
 } from './modules/index.js';
 
@@ -118,14 +117,6 @@ todoListContainer.addEventListener('click', (e) => {
 
   if (e.target.matches('button svg')) {
     removeTask(Number(e.target.parentElement.getAttribute('id')));
-    renderTodoList();
-  }
-
-  if (e.target.matches('span svg')) {
-    toggleTaskCompleted(Number(e.target.parentElement.getAttribute('id')));
-    renderTodoList();
-  } else if (e.target.classList.contains('form-check-input')) {
-    toggleTaskCompleted(Number(e.target.getAttribute('id')));
     renderTodoList();
   }
 });

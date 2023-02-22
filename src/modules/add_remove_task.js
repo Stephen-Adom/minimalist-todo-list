@@ -28,12 +28,6 @@ const removeTask = (id) => {
   saveToStorage();
 };
 
-const toggleTaskCompleted = (index) => {
-  const selectedTodo = TodoList.find((todo) => todo.index === index);
-  selectedTodo.completed = !selectedTodo.completed;
-  saveToStorage();
-};
-
 const editTaskDescription = (description, index) => {
   const selectedTodo = TodoList.find((todo) => todo.index === index);
   selectedTodo.description = description;
@@ -41,7 +35,7 @@ const editTaskDescription = (description, index) => {
 };
 
 export {
-  addTask, removeTask, TodoList, toggleTaskCompleted, editTaskDescription,
+  addTask, removeTask, TodoList, editTaskDescription,
 };
 
 fromEvent(window, 'DOMContentLoaded').subscribe(() => {
