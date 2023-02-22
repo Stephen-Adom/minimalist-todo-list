@@ -1,6 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import './styles.css';
 import { debounceTime, fromEvent } from 'rxjs';
+import './styles.css';
 
 import arrowDown from './assets/bend-arrow-right-svgrepo-com.svg';
 import TodoLogo from './assets/list.png';

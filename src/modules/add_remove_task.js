@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { fromEvent, debounceTime } from 'rxjs';
 import Todo from './todo.model.js';
 
