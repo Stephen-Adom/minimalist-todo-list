@@ -3,6 +3,7 @@ import './styles.css';
 import { debounceTime, fromEvent } from 'rxjs';
 
 import arrowDown from './assets/bend-arrow-right-svgrepo-com.svg';
+import TodoLogo from './assets/list.png';
 import {
   addTask,
   removeTask,
@@ -13,6 +14,7 @@ import {
 const todoListContainer = document.querySelector('.list-group');
 const submitBtn = document.querySelector('.submitBtn img');
 const form = document.querySelector('form');
+const logoContainer = document.querySelector('.logo-container img');
 
 const renderCheckBoxIfCompletedIsFalse = (todo) => {
   if (todo.completed) {
@@ -132,4 +134,5 @@ fromEvent(todoListContainer, 'input').pipe(debounceTime(800)).subscribe((e) => {
 window.addEventListener('DOMContentLoaded', () => {
   renderTodoList();
   submitBtn.src = arrowDown;
+  logoContainer.src = TodoLogo;
 });
