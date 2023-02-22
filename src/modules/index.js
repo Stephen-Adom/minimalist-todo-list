@@ -1,2 +1,4 @@
-export { default as TodoList } from './todoList.js';
-export { default as Todo } from './todoList.js';
+export {
+  addTask, removeTask, editTaskDescription,
+} from './add_remove_task.js';
+export { TodoList } from './add_remove_task.js';
