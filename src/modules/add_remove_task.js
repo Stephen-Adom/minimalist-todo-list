@@ -14,7 +14,6 @@ const resetTaskIndexes = () => {
     ...todo,
     index: index + 1,
   }));
-  console.log(TodoList, 'updated');
 };
 
 const addTask = (description) => {
