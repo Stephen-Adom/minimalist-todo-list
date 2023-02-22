@@ -119,6 +119,9 @@ todoListContainer.addEventListener('click', (e) => {
   if (e.target.matches('button svg')) {
     removeTask(Number(e.target.parentElement.getAttribute('id')));
     renderTodoList();
+  } else if (e.target.matches('button svg path')) {
+    removeTask(Number(e.target.parentElement.parentElement.getAttribute('id')));
+    renderTodoList();
   }
 });
 

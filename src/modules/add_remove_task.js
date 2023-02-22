@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { fromEvent } from 'rxjs';
+import { fromEvent, debounceTime } from 'rxjs';
 import Todo from './todo.model.js';
 
 // eslint-disable-next-line import/no-mutable-exports
@@ -14,6 +14,7 @@ const resetTaskIndexes = () => {
     ...todo,
     index: index + 1,
   }));
+  console.log(TodoList, 'updated');
 };
 
 const addTask = (description) => {
@@ -25,6 +26,7 @@ const addTask = (description) => {
 const removeTask = (id) => {
   TodoList = TodoList.filter((todo) => todo.index !== id);
   resetTaskIndexes();
+  debounceTime(500);
   saveToStorage();
 };
 
