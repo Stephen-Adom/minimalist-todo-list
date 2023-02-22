@@ -108,10 +108,11 @@ form.addEventListener('submit', (e) => {
 });
 
 todoListContainer.addEventListener('click', (e) => {
-  removeAllActiveClassFromTodoItem();
   if (e.target.matches('section')) {
+    removeAllActiveClassFromTodoItem();
     e.target.parentNode.classList.add('active');
   } else if (e.target.matches('section input')) {
+    removeAllActiveClassFromTodoItem();
     e.target.parentNode.parentNode.parentNode.classList.add('active');
   }
 
