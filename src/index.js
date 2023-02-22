@@ -6,7 +6,6 @@ import TodoLogo from './assets/list.png';
 import {
   addTask,
   removeTask,
-  TodoList,
   editTaskDescription,
 } from './modules/index.js';
 
@@ -42,6 +41,7 @@ const checkIfTaskCompleted = (completed) => {
 
 // display all todoList
 const renderTodoList = () => {
+  const TodoList = JSON.parse(localStorage.getItem('myTasks'));
   if (TodoList.length) {
     let todoHtml = '';
 

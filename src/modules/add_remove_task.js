@@ -1,7 +1,6 @@
 import { fromEvent, debounceTime } from 'rxjs';
 import Todo from './todo.model.js';
 
-// eslint-disable-next-line import/no-mutable-exports
 let TodoList = [];
 
 const saveToStorage = () => {
@@ -34,12 +33,12 @@ const editTaskDescription = (description, index) => {
   saveToStorage();
 };
 
-export {
-  addTask, removeTask, TodoList, editTaskDescription,
-};
-
 fromEvent(window, 'DOMContentLoaded').subscribe(() => {
   if (localStorage.getItem('myTasks')) {
     TodoList = JSON.parse(localStorage.getItem('myTasks'));
   }
 });
+
+export {
+  addTask, removeTask, editTaskDescription,
+};
