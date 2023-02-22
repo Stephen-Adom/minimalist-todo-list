@@ -41,6 +41,7 @@ Minimalist To-do Application is a tool that helps to organize your day. It simpl
 - **CSS 3**
 - **Bootstrap 5**
 - **Webpack 5**
+- **Rxjs**
 
 <!-- Features -->
 
@@ -50,6 +51,8 @@ Minimalist To-do Application is a tool that helps to organize your day. It simpl
 - **Todo List**
 - **Clear Completed Todos**
 - **Refresh App**
+- **Clear Completed tasks**
+- **Mark task as complete**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,9 +162,7 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **Add Todo**
-- [ ] **Remove Todo**
-- [ ] **Mark Todo as complete**
+- [ ] **Authentication**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
