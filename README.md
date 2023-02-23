@@ -60,7 +60,7 @@ Minimalist To-do Application is a tool that helps to organize your day. It simpl
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Minimalist Todo App](https://minimalist-todo-list.vercel.app/)
+- Here is the link to the live demo version - [Minimalist Todo App](https://minimalist-todo-list.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
