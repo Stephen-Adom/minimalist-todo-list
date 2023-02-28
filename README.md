@@ -31,7 +31,7 @@
 
 # 📖 [Project Summary] <a name="about-project"></a>
 
-A web-based application that allows users to create and manage tasks. Users can add new tasks, edit existing ones, and mark tasks as complete. The application also provides a clear completed task feature that allows users to filter out completed tasks. This helps users stay organized and on top of their tasks, reducing the chances of missing important deadlines. The project is designed to be user-friendly and intuitive, with a clean and modern interface. It is built with javascript, webpack, bootstrap 5 and rxjs for asynchronous tasks events.
+A web-based application that allows users to create and manage tasks. Users can add new tasks, edit existing ones, refresh the app and mark tasks as complete. The application also provides a clear completed task feature that allows users to filter out completed tasks. This helps users stay organized and on top of their tasks, reducing the chances of missing important deadlines. The project is designed to be user-friendly and intuitive, with a clean and modern interface. It is built with javascript, webpack, bootstrap 5 and rxjs for asynchronous tasks events.
 
 ## 🛠 Built With <a name="built-with"></a>
 
